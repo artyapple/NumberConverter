@@ -1,8 +1,9 @@
-package dev.iablokov.numberconverter.services.audit;
+package dev.iablokov.numberconverter.services.audit.impl;
 
 import dev.iablokov.numberconverter.models.AuditLog;
 import dev.iablokov.numberconverter.models.DataFormat;
 import dev.iablokov.numberconverter.repositories.AuditLogRepository;
+import dev.iablokov.numberconverter.services.audit.AuditLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Sort;
 import org.springframework.scheduling.annotation.Async;
@@ -15,7 +16,7 @@ import java.util.Set;
 
 @Service
 @Slf4j
-public class AuditLogServiceImpl implements AuditLogService{
+public class AuditLogServiceImpl implements AuditLogService {
 
     private final AuditLogRepository auditLogRepository;
 
@@ -25,7 +26,7 @@ public class AuditLogServiceImpl implements AuditLogService{
 
     @Async
     @Override
-    public void addLogEntry(DataFormat inpFormat, String input, DataFormat outFormat, String output){
+    public void addAuditLogEntry(DataFormat inpFormat, String input, DataFormat outFormat, String output){
         AuditLog auditLog = new AuditLog();
         auditLog.setInputType(inpFormat);
         auditLog.setOutputType(outFormat);

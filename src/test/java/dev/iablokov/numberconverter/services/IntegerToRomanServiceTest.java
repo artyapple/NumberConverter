@@ -1,6 +1,6 @@
 package dev.iablokov.numberconverter.services;
 
-import dev.iablokov.numberconverter.services.output.IntegerToRomanService;
+import dev.iablokov.numberconverter.services.output.impl.IntegerToRomanService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,11 +35,11 @@ class IntegerToRomanServiceTest {
 
     @Test
     void minInvalidValue(){
-        assertThrows(IllegalArgumentException.class, ()-> {integerToRomanService.convert(0);});
+        assertThrows(IllegalArgumentException.class, ()-> integerToRomanService.convert(0));
     }
 
     @Test
     void maxInvalidValue(){
-        assertThrows(IllegalArgumentException.class, ()-> {integerToRomanService.convert(4000);});
+        assertThrows(IllegalArgumentException.class, ()-> integerToRomanService.convert(4000));
     }
 }

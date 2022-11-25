@@ -2,13 +2,13 @@ package dev.iablokov.numberconverter.services.convert;
 
 import dev.iablokov.numberconverter.models.DataFormat;
 
-public interface ConvertService<T, R> {
+public interface ConvertService {
     /**
      * gets result with type outType for value with inpType
      * @param inpType input type
      * @param outType output type
-     * @param value
+     * @param value input value
      * @return result as String
      */
-    public String convert(DataFormat inpType, DataFormat outType, String value);
+    String convert(DataFormat inpType, DataFormat outType, String value);
 }

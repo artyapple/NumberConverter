@@ -1,12 +1,14 @@
-package dev.iablokov.numberconverter.services.convert;
+package dev.iablokov.numberconverter.services.convert.impl;
 
 import dev.iablokov.numberconverter.models.DataFormat;
-import dev.iablokov.numberconverter.services.input.InputService;
+import dev.iablokov.numberconverter.services.convert.ConvertService;
 import dev.iablokov.numberconverter.services.input.InputServiceFactory;
 import dev.iablokov.numberconverter.services.output.OutputServiceFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+/**
+ * converter service impl
+ */
 @Service
 public class ConverterServiceImpl implements ConvertService {
 

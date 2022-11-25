@@ -1,6 +1,6 @@
 package dev.iablokov.numberconverter.services;
 
-import dev.iablokov.numberconverter.services.input.BinStringToIntegerConverterService;
+import dev.iablokov.numberconverter.services.input.impl.BinStringToIntegerConverterService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

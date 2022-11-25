@@ -3,8 +3,8 @@ package dev.iablokov.numberconverter.services.input;
 public interface InputService {
 
     /**
-     * converts string to integer
-     * @return
+     * converts string value to integer
+     * @return value as Integer
      */
-    public Integer convert(String value);
+    Integer convert(String value);
 }
