@@ -2,7 +2,7 @@
 
   <ng-container matColumnDef="timestamp">
     <th mat-header-cell *matHeaderCellDef> Timestamp </th>
-    <td mat-cell *matCellDef="let element"> {{element.timestamp | date:'HH:mm:ss dd.MM.yyyy'}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.timestamp | date:'dd.MM.yyyy HH:mm:ss'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="inputType">
@@ -21,7 +21,7 @@
   </ng-container>
 
   <ng-container matColumnDef="outputValue">
-    <th mat-header-cell *matHeaderCellDef> Output value </th>
+    <th mat-header-cell *matHeaderCellDef> Result </th>
     <td mat-cell *matCellDef="let element"> {{element.outputValue}} </td>
   </ng-container>
 

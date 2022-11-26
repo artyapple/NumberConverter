@@ -30,6 +30,7 @@
             <mat-select formControlName="outputType">
               <mat-option value="ROMAN">Roman</mat-option>
             </mat-select>
+              <mat-error *ngIf="formGroup.get('outputType')?.errors?.required">Output type is required</mat-error>
           </mat-form-field>
           </mat-grid-tile>
           <mat-grid-tile>
@@ -47,34 +48,3 @@
     </mat-grid-tile>
   </mat-grid-list>
 </form>
-<!--</div>-->
-<!--<form [formGroup]="formGroup">-->
-<!--  <mat-grid-list cols="3" rowHeight="5:1">-->
-<!--    <mat-grid-tile>-->
-<!--      <mat-form-field appearance="fill">-->
-<!--      <mat-label>Input type</mat-label>-->
-<!--      <mat-select formControlName="inputType">-->
-<!--        <mat-option value="DECIMAL">Decimal</mat-option>-->
-<!--        <mat-option value="two">Second option</mat-option>-->
-<!--      </mat-select>-->
-<!--    </mat-form-field>-->
-<!--    </mat-grid-tile>-->
-<!--    <mat-grid-tile>-->
-<!--      <mat-form-field appearance="fill">-->
-<!--      <mat-label>Value</mat-label>-->
-<!--      <input formControlName="value" matInput type="number">-->
-<!--      </mat-form-field>-->
-<!--    </mat-grid-tile>-->
-<!--    <mat-grid-tile>-->
-<!--      <mat-form-field appearance="fill">-->
-<!--      <mat-label>Output type</mat-label>-->
-<!--      <mat-select formControlName="outputType">-->
-<!--        <mat-option value="ROMAN">Roman</mat-option>-->
-<!--        <mat-option value="two">Second option</mat-option>-->
-<!--      </mat-select>-->
-<!--    </mat-form-field>-->
-<!--    </mat-grid-tile>-->
-<!--  </mat-grid-list>-->
-<!--  <h3>{{result$ | async}}</h3>-->
-<!--  <button mat-button (click)="onConvert()">Convert</button>-->
-<!--</form>-->

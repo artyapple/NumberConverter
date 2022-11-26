@@ -68,14 +68,4 @@ export class NumberConverterComponent implements OnInit{
       }
     });
   }
-
-  // get inputTypeErrors(): ValidationErrors | null | undefined {
-  //   return this.formGroup.get('inputType')?.errors;
-  // }
-  // get outputTypeErrors(): ValidationErrors | null | undefined {
-  //   return this.formGroup.get('outputType')?.errors;
-  // }
-  // get valueErrors(): ValidationErrors | null | undefined {
-  //   return this.formGroup.get('value')?.errors;
-  // }
 }
