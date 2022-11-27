@@ -10,7 +10,7 @@ Implemented as a self-contained app (with all the dependencies baked into one ja
 - Angular 15 + angular material
 
 # how to start
-download repository and start following command form the project root folder:
+download repository and start following command from the project root folder:
 ```
 mvn package && java -jar target/NumberConverter.jar
 ```
