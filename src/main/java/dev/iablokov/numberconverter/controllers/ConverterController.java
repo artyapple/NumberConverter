@@ -3,7 +3,7 @@ package dev.iablokov.numberconverter.controllers;
 import dev.iablokov.numberconverter.models.ConvertRequest;
 import dev.iablokov.numberconverter.models.ConvertResponse;
 import dev.iablokov.numberconverter.services.audit.AuditLogService;
-import dev.iablokov.numberconverter.services.convert.ConvertService;
+import dev.iablokov.numberconverter.services.convert.ConverterService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
@@ -22,9 +22,9 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ConverterController {
     private final AuditLogService auditLogService;
-    private final ConvertService convertService;
+    private final ConverterService convertService;
 
-    public ConverterController(AuditLogService auditLogServiceImpl, ConvertService convertService) {
+    public ConverterController(AuditLogService auditLogServiceImpl, ConverterService convertService) {
         this.auditLogService = auditLogServiceImpl;
         this.convertService = convertService;
     }

@@ -2,7 +2,7 @@ package dev.iablokov.numberconverter.services.convert;
 
 import dev.iablokov.numberconverter.models.DataFormat;
 
-public interface ConvertService {
+public interface ConverterService {
     /**
      * gets result with type outType for value with inpType
      * @param inpType input type

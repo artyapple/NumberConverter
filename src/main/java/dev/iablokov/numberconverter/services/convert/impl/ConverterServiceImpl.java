@@ -1,7 +1,7 @@
 package dev.iablokov.numberconverter.services.convert.impl;
 
 import dev.iablokov.numberconverter.models.DataFormat;
-import dev.iablokov.numberconverter.services.convert.ConvertService;
+import dev.iablokov.numberconverter.services.convert.ConverterService;
 import dev.iablokov.numberconverter.services.input.InputServiceFactory;
 import dev.iablokov.numberconverter.services.output.OutputServiceFactory;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * converter service impl
  */
 @Service
-public class ConverterServiceImpl implements ConvertService {
+public class ConverterServiceImpl implements ConverterService {
 
     private final InputServiceFactory input;
     private final OutputServiceFactory output;
