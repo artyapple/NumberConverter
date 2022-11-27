@@ -2,3 +2,14 @@
   max-width: 400px;
   min-width: 240px;
 }
+
+.flexContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  overflow: auto;
+  flex-direction: row;
+  padding-bottom: 1em;
+}

@@ -1,7 +1,7 @@
 ######################
 # Project Specific
 ######################
-src/main/resources/static/
+/src/main/resources/static/
 /build/www/**
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
@@ -175,5 +175,3 @@ baseline.json
 # Ignore .history for the xyz.local-history VSCode extension
 .history
 
-# Husky
-.husky/_

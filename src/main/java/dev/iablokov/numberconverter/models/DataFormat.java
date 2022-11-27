@@ -9,13 +9,13 @@ public enum DataFormat {
     DECIMAL, BINARY, ROMAN;
 
     @JsonCreator
-    public static DataFormat getDepartmentFromCode(String value) {
+    public static DataFormat getDataFormat(String value) {
         for (DataFormat df : DataFormat.values()) {
 
             if (df.name().equalsIgnoreCase(value)) {
                 return df;
             }
         }
-        return null;
+        throw new IllegalArgumentException(value + " isn't supported data format.");
     }
 }

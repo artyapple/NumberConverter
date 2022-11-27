@@ -1,37 +1,35 @@
 <!--<div class="main-div">-->
 <form [formGroup]="formGroup">
-  <mat-grid-list cols="1" rowHeight="3:1">
-    <mat-grid-tile>
-  <mat-card class="example-card">
-
-  <mat-card-content>
+  <div class="flexContainer">
+    <mat-card class="example-card">
+      <mat-card-content>
         <mat-grid-list cols="1" rowHeight="3:1">
           <mat-grid-tile>
             <mat-form-field appearance="fill">
-            <mat-label>From</mat-label>
-            <mat-select formControlName="inputType">
-              <mat-option value="DECIMAL">Decimal</mat-option>
-              <mat-option value="BINARY">Binary</mat-option>
-            </mat-select>
+              <mat-label>From</mat-label>
+              <mat-select formControlName="inputType">
+                <mat-option value="DECIMAL">Decimal</mat-option>
+                <mat-option value="BINARY">Binary</mat-option>
+              </mat-select>
               <mat-error *ngIf="formGroup.get('inputType')?.errors?.required">Input type is required</mat-error>
-          </mat-form-field>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-form-field appearance="fill">
-            <mat-label>Value</mat-label>
-            <input formControlName="value" matInput type="number">
-                <mat-error *ngIf="formGroup.get('value')?.errors?.required">Value is required</mat-error>
-                <mat-error *ngIf="formGroup.get('value')?.errors?.notBinary">Value isn't binary</mat-error>
             </mat-form-field>
           </mat-grid-tile>
           <mat-grid-tile>
             <mat-form-field appearance="fill">
-            <mat-label>To</mat-label>
-            <mat-select formControlName="outputType">
-              <mat-option value="ROMAN">Roman</mat-option>
-            </mat-select>
+              <mat-label>Value</mat-label>
+              <input formControlName="value" matInput type="number">
+              <mat-error *ngIf="formGroup.get('value')?.errors?.required">Value is required</mat-error>
+              <mat-error *ngIf="formGroup.get('value')?.errors?.notBinary">Value isn't binary</mat-error>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <mat-label>To</mat-label>
+              <mat-select formControlName="outputType">
+                <mat-option value="ROMAN">Roman</mat-option>
+              </mat-select>
               <mat-error *ngIf="formGroup.get('outputType')?.errors?.required">Output type is required</mat-error>
-          </mat-form-field>
+            </mat-form-field>
           </mat-grid-tile>
           <mat-grid-tile>
             <button color="primary" mat-button (click)="onConvert()">Convert</button>
@@ -43,8 +41,7 @@
             </mat-form-field>
           </mat-grid-tile>
         </mat-grid-list>
-  </mat-card-content>
-</mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </form>

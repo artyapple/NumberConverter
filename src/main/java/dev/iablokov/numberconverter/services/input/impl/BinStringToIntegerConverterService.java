@@ -12,6 +12,12 @@ public class BinStringToIntegerConverterService implements InputService {
 
     @Override
     public Integer convert(String value) {
-        return Integer.parseInt(value, 2);
+        Integer result;
+        try {
+            result = Integer.parseInt(value, 2);
+        } catch (NumberFormatException ex){
+            throw new IllegalArgumentException("Binary value "+value + " can't be converted to natural number.");
+        }
+        return result;
     }
 }

@@ -22,6 +22,6 @@ public class InputServiceFactory {
         } else if(DataFormat.BINARY.equals(type)){
             return new BinStringToIntegerConverterService();
         }
-        throw new IllegalArgumentException("Not supported input data format.");
+        throw new IllegalArgumentException("Not supported input type format.");
     }
 }

@@ -18,6 +18,6 @@ public class OutputServiceFactory {
         if(DataFormat.ROMAN.equals(type)){
             return new IntegerToRomanService();
         }
-        throw new IllegalArgumentException("Not supported input data format.");
+        throw new IllegalArgumentException("Not supported output type format.");
     }
 }

@@ -12,6 +12,12 @@ public class DecStringToIntegerConverterService implements InputService {
 
     @Override
     public Integer convert(String value) {
-        return Integer.parseInt(value);
+        Integer result;
+        try{
+            result = Integer.parseInt(value);
+        } catch (NumberFormatException e){
+            throw new IllegalArgumentException("Decimal value "+value + " can't be converted to natural number.");
+        }
+        return result;
     }
 }
