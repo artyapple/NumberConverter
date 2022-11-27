@@ -10,11 +10,11 @@ Implemented as a self-contained app (with all the dependencies baked into one ja
 - Angular 15 + angular material
 
 # how to start
-download repository and start following command from the project root folder:
+You can download the ready-to-start jar [here](https://s3.eu-central-1.amazonaws.com/dev.iablokov.cflox.demo/NumberConverter.jar) and start if with:
 ```
 mvn package && java -jar target/NumberConverter.jar
 ```
-or you can download the ready-to-start jar [here](https://s3.eu-central-1.amazonaws.com/dev.iablokov.cflox.demo/NumberConverter.jar) and start if with:
+or download repository and start following command from the project root folder:
 ```
 mvn package && java -jar target/NumberConverter.jar
 ```
