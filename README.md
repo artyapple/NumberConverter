@@ -12,7 +12,7 @@ Implemented as a self-contained app (with all the dependencies baked into one ja
 # how to start
 You can download the ready-to-start jar [here](https://s3.eu-central-1.amazonaws.com/dev.iablokov.cflox.demo/NumberConverter.jar) and start if with:
 ```
-mvn package && java -jar target/NumberConverter.jar
+java -jar target/NumberConverter.jar
 ```
 or download repository and start following command from the project root folder:
 ```
