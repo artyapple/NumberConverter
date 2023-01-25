@@ -24,7 +24,7 @@ public class AuditLogServiceImpl implements AuditLogService {
         this.auditLogRepository = auditLogRepository;
     }
 
-    @Async
+    //@Async
     @Override
     public void addAuditLogEntry(DataFormat inpFormat, String input, DataFormat outFormat, String output){
         AuditLog auditLog = new AuditLog();

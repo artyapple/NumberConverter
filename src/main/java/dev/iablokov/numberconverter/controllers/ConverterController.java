@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +31,7 @@ public class ConverterController {
     }
 
     @PostMapping("/convert")
+    @Transactional
     public ConvertResponse convert(@Valid @RequestBody ConvertRequest request){
         String result = null;
         try {
@@ -41,23 +43,5 @@ public class ConverterController {
             auditLogService.addAuditLogEntry(request.getInputType(), request.getValue(), request.getOutputType(), result);
         }
         return new ConvertResponse(result);
-    }
-
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<?> handleIllegalArgumentException(IllegalArgumentException ex){
-        Map<String, String> errors = new HashMap<>();
-        errors.put("message", ex.getMessage());
-        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
-    }
-
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<?> handleIllegalArgumentException(MethodArgumentNotValidException ex){
-        Map<String, List<String>> errors = new HashMap<>();
-        errors.put("message", ex.getBindingResult()
-                .getFieldErrors()
-                .stream()
-                .map(DefaultMessageSourceResolvable::getDefaultMessage)
-                .collect(Collectors.toList()));
-        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 }

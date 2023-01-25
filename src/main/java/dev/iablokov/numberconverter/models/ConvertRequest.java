@@ -1,5 +1,6 @@
 package dev.iablokov.numberconverter.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import javax.validation.constraints.NotNull;
  * request
  */
 @Data
+@AllArgsConstructor
 public class ConvertRequest {
     @NotNull(message="Please provide a valid inputType")
     private DataFormat inputType;
